@@ -1,0 +1,452 @@
+:root {
+  --theme-color: #daa189;
+  --botton-slide-background-color: #f5f4f4;
+  --botton-slide-color: #080808;
+  --text-color-inverse: #f2e8e8;
+  --text-color: #0c0c0c;
+  --border-main-content: #fabb83;
+  --navbar-shallow-color: #e1b9a8;
+  --menu-mobile-backgroud-color: #95827a;
+}
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Header */
+
+.topheader {
+  box-shadow: 0 4px 5px var(--navbar-shallow-color);
+  position: static;
+  background-color: var(--theme-color);
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+  display: flex;
+  align-items: baseline;
+  margin: 2px;
+  padding: 0;
+  height: auto;
+  width: 150px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu li {
+  padding: 0 15px;
+}
+
+.menu a {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  background-color: var(--border-main-content);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.menu a.selected::after,
+.menu a:hover::after {
+  opacity: 0.8;
+}
+
+.menu a:hover {
+  color: var(--text-color-inverse);
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+.logotype {
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Section */
+
+.main-section {
+  text-align: center; /* Centra el contenido dentro de la sección */
+  padding: 40px; /* Ajusta el espacio interno según tus preferencias */
+  background-color: #f2eae7;
+}
+/* Estilos para el título */
+.titulo-main-section h1 {
+  font-size: 60px; /* Ajusta el tamaño del título según tus necesidades */
+  margin-bottom: 20 px; /* Espacio inferior entre el título y el contenido */
+  background-color: #f2dddd; /* Color de fondo del título */
+  border-radius: 10px; /* Borde redondeado */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Borde difuminado suave */
+}
+
+/* Estilos para el carrusel*/
+.carrousel {
+  width: 100%;
+  max-width: 120em;
+  padding: 2em;
+  overflow: hidden;
+}
+.carrousel .slides {
+  width: 300%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.carrousel .img {
+  width: calc(100% / 3 - 3em);
+  min-height: 10vh;
+}
+.puntos {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.punto {
+  width: 10px;
+  height: 10px;
+  background-color: #999; /* Color de los puntos inactivos */
+  border-radius: 50%;
+  margin: 0 5px; /* Espacio entre los puntos (ajusta según sea necesario) */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.punto.activo {
+  background-color: #333; /* Color del punto activo */
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+  text-align: justify; /* Justifica el texto de los párrafos */
+  margin-top: 20px; /* Espacio superior entre el carrusel y el contenido principal */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.824
+  ); /* Fondo tenue (ajusta la opacidad según tus preferencias) */
+  padding: 20px; /* Espaciado interno para separar el contenido del borde sombreado */
+  border: 1px solid #ddd; /* Borde sombreado */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra en el borde */
+  border-radius: 10px; /* Borde redondeado (ajusta el valor según tus preferencias) */
+}
+
+.intro-container h2 {
+  font-size: 22px; /* Ajusta el tamaño del subtítulo según tus necesidades */
+  margin-bottom: 15px; /* Espacio inferior entre el subtítulo y el texto */
+  text-align: center; /* Justifica el texto del titulo */
+}
+
+.intro-container p {
+  font-size: 16px; /* Ajusta el tamaño del texto del párrafo según tus necesidades */
+  margin-bottom: 20px; /* Espacio inferior entre los párrafos */
+}
+
+/* Estilos generales para el footer */
+
+footer {
+  background-color: var(--theme-color);
+  color: var(--text-color-inverse);
+  padding: 20px;
+}
+
+/* Estilos para el contenedor del footer */
+.footer-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Estilos para el logo */
+.footer-logo img {
+  height: auto;
+  width: 150px;
+  margin-left: 25px;
+}
+
+/* Estilos para los datos de contacto */
+.contact-info {
+  flex: 2; /* Ocupa el espacio disponible restante */
+  text-align: center;
+  margin: 20px 0;
+}
+
+.footer-contact-info-titulo {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-contact-info-contacto-ul {
+  text-align: match-parent;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact-info-contacto-ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Estilos para la lista de redes sociales */
+.footer-social-media {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Eliminamos el margen predeterminado para evitar espacios adicionales */
+  display: flex; /* Utilizamos flexbox para mostrar los elementos en línea */
+  justify-content: center; /* Alinea los elementos hacia la derecha */
+}
+
+.footer-social-media-lista {
+  display: inline-block;
+  margin-left: 20px; /* Espacio entre íconos de redes sociales */
+}
+
+.footer-social-media-lista:last-child {
+  margin-right: 0; /* Elimina el espacio a la derecha del último ícono */
+}
+.footer-social-media-lista a img {
+  max-width: 40px; /* Ajusta el tamaño de los íconos según tus necesidades */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  /* Menu  Hamburguesa*/
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: var(--menu-mobile-backgroud-color);
+    height: 100%;
+    overflow-y: auto;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .menu li {
+    padding: 0;
+  }
+
+  .menu a {
+    color: var(--text-color-inverse);
+    line-height: 80px;
+    font-size: 25px;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    padding: 20px 15px;
+  }
+
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .menu a::after {
+    content: none;
+  }
+
+  .menu a:hover,
+  .menu a.selected {
+    color: var(--botton-slide-color);
+  }
+
+  /* Main Section */
+  .main-section {
+    text-align: center; /* Centra el contenido dentro de la sección */
+    padding: 20px; /* Ajusta el espacio interno según tus preferencias */
+    background-color: #f2eae7;
+  }
+  /* Estilos para el título */
+  .titulo-main-section h1 {
+    font-size: 35px; /* Ajusta el tamaño del título según tus necesidades */
+    margin-bottom: 10 px; /* Espacio inferior entre el título y el contenido */
+    background-color: #f2dddd; /* Color de fondo del título */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Borde difuminado suave */
+  }
+
+  /* Estilos para el carrusel*/
+  .carrousel {
+    width: 100%;
+    max-width: 120em;
+    padding: 1em;
+    overflow: hidden;
+  }
+  /* Estilos generales para el footer */
+
+  footer {
+    background-color: var(--theme-color);
+    color: var(--text-color-inverse);
+    padding: 20px;
+  }
+
+  /* Estilos para el contenedor del footer */
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  /* Estilos para el logo */
+  .footer-logo {
+    margin-left: -10px;
+  }
+  .footer-logo img {
+    height: auto;
+    width: 90px;
+  }
+
+  /* Estilos para los datos de contacto */
+  .contact-info {
+    flex: 2; /* Ocupa el espacio disponible restante */
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .footer-contact-info-titulo {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .footer-contact-info-contacto-ul {
+    text-align: match-parent;
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-contact-info-contacto-ul li {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  /* Estilos para la lista de redes sociales */
+  .footer-social-media {
+    flex: 1;
+    text-align: right;
+  }
+
+  .footer-social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Eliminamos el margen predeterminado para evitar espacios adicionales */
+    display: flex; /* Utilizamos flexbox para mostrar los elementos en línea */
+  }
+
+  .footer-social-media-lista {
+    display: inline-block;
+    margin-left: 10px; /* Espacio entre íconos de redes sociales */
+  }
+
+  .footer-social-media-lista a img {
+    max-width: 22px; /* Ajusta el tamaño de los íconos según tus necesidades */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Estilos para el carrusel*/
+  .carrousel {
+    width: 100%;
+    max-width: 130em;
+    padding: 1em;
+    overflow: hidden;
+  }
+  carrousel .slides {
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+  }
+  .carrousel .img {
+    width: calc(100% / 3 - 3em);
+    min-height: 10vh;
+  }
+  .footer-contact-info-contacto-ul li {
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+}
