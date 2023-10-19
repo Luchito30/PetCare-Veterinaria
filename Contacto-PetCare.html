@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto-PetCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
+   
+    <link rel="stylesheet" href="ccs\navbar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/a1a4bfb7b7.js" crossorigin="anonymous"></script>
+
+    <script defer src="app.js"></script>
+
+
+
+</head>
+
+<header class="topheader">
+    <nav class="topnav">
+        <a href="#" class="logo">
+            <img height="150" width="250" src="imgs\logo.png" alt="logoPetCare">
+        </a>
+
+        <button class="open-menu" aria-label="Abrir menu">
+            <img src="hamburguer.svg" alt="Abrir menu">
+
+        </button>
+
+        <ul class="menu">
+
+            <button class="close-menu" aria-label="Cerrar menu">
+                <img src="close.svg" alt="Cerrar menu">
+            </button>
+
+            <li><a href="index.html" target="_blank">INICIO</a></li>
+            <li><a href="servicios.html" target="_blank">SERVICIOS</a></li>
+            <li><a href="nosotros.html" target="_blank">NOSOTROS</a></li>
+            <li><a href="equipo.html" target="_blank">EQUIPO</a></li>
+            <li><a href="#Contacto-PetCare" target="_self">CONTACTO</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+
+    <h2 class="subtitulo-contacto">Donde nos encontramos</h2>
+
+
+    <div class="mapa">
+
+        <iframe width="100%"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.0963726615805!2d-58.65208720000002!3d-34.39889629999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca3e513bd265d%3A0x9a3d6f027c33ad4!2sNordelta%20Centro%20Comercial!5e0!3m2!1ses!2sar!4v1696971435774!5m2!1ses!2sar"
+            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    </div>
+
+
+    <div class="container">
+        <div class="column" id="contact-form">
+            <h2>Dejanos tu mensaje</h2>
+            <form id="contactForm">
+                <input required type="text" placeholder="Nombre*" id="nombre">
+                <input required type="text" placeholder="Apellido*" id="apellido">
+                <input required type="email" placeholder="Email*" id="email">
+                <input required type="tel" placeholder="Nro de telefono*" id="telefono">
+                <textarea required placeholder="Mensaje*" id="mensaje"></textarea>
+                <button type="submit">Enviar</button>
+
+            </form>
+
+
+
+        </div>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close" id="closePopup">&times;</span>
+                <p>Tu mensaje se ha enviado satisfactoriamente.</p>
+            </div>
+        </div>
+
+        <script src="validationform.js"></script>
+
+        <div class="column" id="contact-info">
+            <h2>Medios de contacto</h2>
+            <p> <i class="fa-solid fa-phone"></i> Telefono: 11-5555-5555 </p>
+            <p> <i class="fa-brands fa-whatsapp"></i> <a class="wapetcare" href=" https://w.app/YXDrPN" target="_blank">
+                    WhatsApp:
+                    11-5555-5555 </p> </a>
+            <p> <i class="fa-regular fa-envelope"></i> <a class="mailpetcare" href="mailto:petcare@petcare.com"> Email:
+                    petcare@petcare.com </p></a>
+            <p> <i class="fa-solid fa-house"></i> Av. de los lagos 7008. B1670. Rincon de Milberg. Bs.As.</p>
+            <p> <i class="fa-brands fa-instagram"></i><a class="igpetcare" href="https://www.instagram.com/" target="_blank"> Instagram: @petcare </p></a>
+        </div>
+    </div>
+
+</body>
+<footer class="footer">
+    <nav class="bottom-nav">
+        <a href="#" class="logofooter">
+            <img src="imgs\logo.png" alt="logo" height="150" width="250"></a>
+
+
+        <ul class="menufooter">
+
+            <li><a href="#inicio" target="_blank">INICIO</a></li>
+            <li><a href="#servicios" target="_blank">SERVICIOS</a></li>
+            <li><a href="#nosotros" target="_blank">NOSOTROS</a></li>
+            <li><a href="#equipo" target="_blank">EQUIPO</a></li>
+            <li><a href="#Contacto-PetCare" target="_self">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <div class="copypetcare">
+        <p><i class="fa-regular fa-copyright"></i> 2023 Pet Care</p>
+    </div>
+
+
+</footer>
+
+</html>
