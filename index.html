@@ -8,6 +8,8 @@
     <link rel="icon" sizes="any" href="/public/images/icon-petcare.png" type="image/png">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/2d353964a9.js" crossorigin="anonymous"></script>
+    <!-- sweetalert -->
+    <script src="/javascripts/libraries/sweetalert.js"></script>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +24,10 @@
 <body>
     <!-- header -->
     <header class="header">
+        <!-- logo -->
+        <div class="header__conteinerimg">
+            <a href="index.html"><img src="/public/images/logo_petcare.png" alt="Logo VetCare"></a>
+        </div>
         <!-- menu Hamburgesa -->
         <section class="header__section--hamburgersa">
             <article class="header__section__article">
@@ -44,10 +50,15 @@
                 </div>
             </article>
         </section>
-        <!-- logo -->
-        <div class="header__conteinerimg">
-            <a href="index.html"><img src="/public/images/logo_petcare.png" alt="Logo VetCare"></a>
-        </div>
+        <!-- menu navbar -->
+        <section class="header__section--navbarmenu">
+            <ul class="header__section--navul">
+                <li class="header__section--navul--li"><a href="#">Servicios</a></li>
+                <li class="header__section--navul--li"><a href="#">Nosotros</a></li>
+                <li class="header__section--navul--li"><a href="#">Equipo</a></li>
+                <li class="header__section--navul--li"><a href="#">Contacto</a></li>
+            </ul>
+        </section>
     </header>
     <!-- main -->
     <main>
@@ -110,24 +121,28 @@
         </section>
         <!-- nosotros -->
         <section class="main__section-nosotros">
-            <h1 class="main__section-nosotros-titulo">PetCare <i
-                    class="fa-solid fa-paw main__section-nosotros-titulo-paw"></i></h1>
-            <h2 class="main__section-nosotros-subtitulo">Porque tu mascota merece lo mejor</h2>
-            <article class="main__section-nosotros__article">
-                <p>Nuestro equipo de profesionales altamente capacitados y comprometidos se dedica a proporcionar la más
-                    alta calidad de atención. Nos enorgullecemos de ofrecer servicios que abarcan desde la atención
-                    médica, vacunación, cirugías avanzadas y servicios de baño. Nuestro enfoque está en la innovación y
-                    la excelencia veterinaria para garantizar la salud y el bienestar de tus compañeros peludos. Tu
-                    mascota siempre está en buenas manos con nosotros.</p>
-            </article>
-            <figure class="main__section-nosotros-containerimg">
-                <img src="/public/images/img-nosotros.png" alt="">
-            </figure>
+            <div class="main__section-nosotros--conteiner">
+                <h1 class="main__section-nosotros-titulo">PetCare <i
+                        class="fa-solid fa-paw main__section-nosotros-titulo-paw"></i></h1>
+                <h2 class="main__section-nosotros-subtitulo">Porque tu mascota merece lo mejor</h2>
+                <article class="main__section-nosotros__article">
+                    <p>Nuestro equipo de profesionales altamente capacitados y comprometidos se dedica a proporcionar la
+                        más
+                        alta calidad de atención. Nos enorgullecemos de ofrecer servicios que abarcan desde la atención
+                        médica, vacunación, cirugías avanzadas y servicios de baño. Nuestro enfoque está en la
+                        innovación y
+                        la excelencia veterinaria para garantizar la salud y el bienestar de tus compañeros peludos. Tu
+                        mascota siempre está en buenas manos con nosotros.</p>
+                </article>
+                <figure class="main__section-nosotros-containerimg">
+                    <img src="/public/images/img-nosotros.png" alt="">
+                </figure>
+            </div>
         </section>
         <!-- servicios -->
         <section class="main__section--servicios">
+            <h2 class="main__section--servicios-titulo">¿Cuales son Nuestros Servicios?</h2>
             <div class="main__section--servicios-container">
-                <h2 class="main__section--servicios-titulo">¿Cuales son Nuestros Servicios?</h2>
                 <article class="main__section--servicios--card">
                     <h4><span><i class="fa-solid fa-briefcase-medical"></i></span><span>CLÍNICA Y CIRUGÍA</span></h4>
                     <img src="/public/images/servicio-atencion.jpg" alt="atencion">
@@ -182,16 +197,17 @@
             </div>
             <div class="footer__section--conteinersocial">
                 <ul>
-                    <li class="footer__section--conteinersocial-lista"><a href=""><img
-                                src="/public/images/icon-face.png" alt="Facebook"></a></li>
-                    <li class="footer__section--conteinersocial-lista"><a href=""><img
-                                src="/public/images/icon-instagram.png" alt="Imstagram"></a></li>
-                    <li class="footer__section--conteinersocial-lista"><a href=""><img
-                                src="/public/images/icon-tweeter.png" alt="tweeter"></a></li>
+                    <li class="footer__section--conteinersocial-lista"><a href=""><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li class="footer__section--conteinersocial-lista"><a href=""><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                    <li class="footer__section--conteinersocial-lista"><a href=""><i
+                                class="fa-brands fa-x-twitter"></i></a></li>
                 </ul>
             </div>
         </section>
         <!-- datos de contacto -->
+        <div class="footer__section2--container">
         <section class="footer__section2">
             <h3 class="footer__section2--titulo">Atencion al cliente</h3>
             <div class="footer__section2--contacto">
@@ -203,9 +219,7 @@
                 </ul>
             </div>
         </section>
-        <section class="footer__section--hr">
-            <hr>
-        </section>
+       <hr class="footer__section--hr">
         <section class="footer__section3">
             <h3 class="footer__section3--titulo">Menu</h3>
             <div class="footer__section3--contacto">
@@ -217,15 +231,30 @@
                 </ul>
             </div>
         </section>
-        <section class="footer__section--hr">
-            <hr>
+            <hr class="footer__section--hr2">
+        <section class="footer__section4">
+            <h3 class="footer__section4--titulo">Newsletter</h3>
+            <form id="form__enviar" class="footer__sections4--form">
+                <input type="email" name="email" id="email" placeholder="Ingrese su email" class="footer__form--input">
+                <button type="submit" class="footer__form--botton"><span
+                        class="footer__form--botton-span">Suscribite</span></button>
+            </form>
         </section>
+        </div>
+            <hr class="footer__section--hr3">
         <section class="footer__section--copyrigth">
             <p>Copyright © 2023 PetCare</p>
         </section>
+        <section class="footer__section--what">
+        <a href="#"><img src="./public/images/whatsapp.png" alt="whatsapp" class="footer__section--what-img"></a>
+        </section>
     </footer>
-    <script src="/public/javascripts/slider.js"></script>
-    <script src="/public/javascripts/cardscroll.js"></script>
+    <!-- SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Archivos javaScripts-->
+    <script src="./public/javascripts/slider.js"></script>
+    <script src="./public/javascripts/cardscroll.js"></script>
+    <script src="./public/javascripts/newsletterValidator.js"></script>
 
 </body>
 

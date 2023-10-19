@@ -37,7 +37,7 @@ function goToSlide(index) {
 }
 
 // Iniciar la animación del slider cada cierto tiempo
-setInterval(nextSlide, 8000); // Cambia de slide cada 8 segundos (10000 ms)
+setInterval(nextSlide, 8000); // Cambia de slide cada 8 segundos (8000 ms)
 
 // Agregar eventos de clic a los indicadores
 const indicator1 = document.getElementById('indicator1');
