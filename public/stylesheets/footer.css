@@ -84,7 +84,9 @@
 }
 
 .footer__section2--contacto-ul li a:hover{
-    color: black;
+    text-underline-position: under;
+    color: #270606;
+    text-decoration: 2px underline;
 }
 
 .footer__section--hr,
