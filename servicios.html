@@ -67,7 +67,7 @@
     <div>
       <img src="./multimedia/atencion.jpg" alt="atención consultas y pequeñas cirugias">
       <h4>CLINICA Y CIRUGIA </h4>
-      <p>Ofrecemos atneción clínica y pequeñas cirugias, internaciones cortaa. La atención de profesionales altamente especializados en todas las áreas de la medicina veterinaria. </p>
+      <p>Ofrecemos atención clínica y pequeñas cirugias, internaciones cortas y estudios. La atención de profesionales altamente especializados en todas las áreas de la medicina veterinaria. </p>
       
     </div>
     <div>
@@ -111,21 +111,70 @@
     </div>
   </section>
  <!-- footer-->
- <footer class="pie">
-  <a href="pages/contacto.html" class="link"><br>Contacto:</a><br><br><p>Horarios: Lun a Vier 10:00 a 19:00, Sab 9:00 a 12:00   </p>
-  <section class="datoscontacto">
-   <img src="./multimedia/iconos/email.png" alt="correo electronico" ><p>petcareveterinaria@gmail.com</p>
-   <img src="./multimedia/iconos/phone.png" alt="telefonos contacto" ><p>(0343) 15-4151408 - (0343) 4950-084</p>
-  </section> 
-  <section  class="sociales">
-   <a href="https://api.whatsapp.com/send?phone=5493434151408" target="_blank"><img src="./multimedia/iconos/ws.png" alt="logo whatsapp"></a> 
-   <a href="https://facebook.com" target="_blank"> <img src="./multimedia/iconos/face.png" alt="logo facebook"></a>
-   <a href="https://instagram.com" target="_blank"><img src="./multimedia/iconos/ins.png" alt="logo instagram" ></a>
-  
-   
+ <footer class="footer">
+  <!-- logo y redes sociales -->
+  <section class="footer__section">
+      <div class="footer__section--conteinerimg">
+          <img src="/public/images/logo_petcare.png" alt="">
+      </div>
+      <div class="footer__section--conteinersocial">
+          <ul>
+              <li class="footer__section--conteinersocial-lista"><a href=""><i
+                          class="fa-brands fa-facebook"></i></a></li>
+              <li class="footer__section--conteinersocial-lista"><a href=""><i
+                          class="fa-brands fa-instagram"></i></a></li>
+              <li class="footer__section--conteinersocial-lista"><a href=""><i
+                          class="fa-brands fa-x-twitter"></i></a></li>
+          </ul>
+      </div>
   </section>
-  <hr/>
- </footer> <!-- fin footer-->
- 
+  <!-- datos de contacto -->
+  <div class="footer__section2--container">
+  <section class="footer__section2">
+      <h3 class="footer__section2--titulo">Atencion al cliente</h3>
+      <div class="footer__section2--contacto">
+          <ul class="footer__section2--contacto-ul">
+              <li>0800 420 0809</li>
+              <li>LU-VI de 09:00 a 21:00</li>
+              <li>SA de 9:00 a 13:00 y 17:00 a 21:00</li>
+              <li><a href="mailto:Petcarevet@gmail.com?Subject=Consulta%20de%20Servicio&body=Necesito%20información%20del%20servicio:">Petcarevet@gmail.com</a></li>
+          </ul>
+      </div>
+  </section>
+ <hr class="footer__section--hr">
+  <section class="footer__section3">
+      <h3 class="footer__section3--titulo">Menu</h3>
+      <div class="footer__section3--contacto">
+          <ul class="footer__section3--contacto-ul">
+              <li><a href="">HOME</a></li>
+              <li><a href="">SERVICIOS</a></li>
+              <li><a href="">NOSOTROS</a></li>
+              <li><a href="">CONTACTO</a></li>
+          </ul>
+      </div>
+  </section>
+      <hr class="footer__section--hr2">
+  <section class="footer__section4">
+      <h3 class="footer__section4--titulo">Newsletter</h3>
+      <form id="form__enviar" class="footer__sections4--form">
+          <input type="email" name="email" id="email" placeholder="Ingrese su email" class="footer__form--input">
+          <button type="submit" class="footer__form--botton"><span
+                  class="footer__form--botton-span">Suscribite</span></button>
+      </form>
+  </section>
+  </div>
+      <hr class="footer__section--hr3">
+  <section class="footer__section--copyrigth">
+      <p>Copyright © 2023 PetCare</p>
+  </section>
+  <section class="footer__section--what">
+  <a href="#"><img src="./multimedia/whatsapp.png" alt="whatsapp" class="footer__section--what-img"></a>
+  </section>
+</footer>
+ <!-- fin footer-->
+   <!-- SweetAlert-->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <!-- Archivos javaScripts-->   
+   <script src="./js/newsletterValidator.js"></script>
 </body>
 </html>
