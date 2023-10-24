@@ -10,30 +10,46 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
      />
   <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"></link>
-  <link rel="stylesheet" href="style.css"/>  
-  <script> 
-function ventanaSecundaria (URL){ 
-   window.open(URL,"ventana1","width=120,height=300,scrollbars=NO") 
-} 
-</script>
+  <link rel="stylesheet" href="styles.css"/>  
+
 </head>
 <body>
-  <header>
-    <h2 class="logo"><img  width="200" height="100" src="multimedia/Logo.png" alt="Logo Veterinaria PetCare" ></h2>
-    <input type="checkbox" id="check">
-    <label for="check" class="mostrar-menu">
-      &#8801
-    </label>  
-    <nav class="menu">     
-      <a href="index.html" >Inicio</a>        
-      <a href="pages/Nosotros.html">Nosotros</a>
-      <a href="pages/servicios.html" >Servicios</a>
-      <a href="pages/Equipo.html">Equipo</a>   
-      <a href="pages/contacto.html">Contacto</a>     
-      <label for="check" class="esconder-menu">
-        &#215
-      </label>      
-    </nav>      
+    <!-- header -->
+    <header class="header">
+      <!-- logo -->
+      <div class="header__conteinerimg">
+          <a href="index.html"><img src="/public/images/logo_petcare.png" alt="Logo VetCare"></a>
+      </div>
+      <!-- menu Hamburgesa -->
+      <section class="header__section--hamburgersa">
+          <article class="header__section__article">
+              <div class="header__section__article__div">
+                  <i class="fa-solid fa-bars"></i>
+                  <nav class="header__section__article__div__nav">
+                      <div class="header__section__article__div__nav__div">
+                          <ul>
+                              <li class="header__nav--navegacion--primaria">
+                                  <a href="index.html"><i class="fa-solid fa-house"></i>
+                                  </a>
+                              </li>
+                              <li class="header__nav--navegacion--primaria"><a href="#">Servicios</a></li>
+                              <li class="header__nav--navegacion--primaria"><a href="#">Nosotros</a></li>
+                              <li class="header__nav--navegacion--primaria"><a href="#">Contacto</a></li>
+                          </ul>
+                      </div>
+                  </nav>
+              </div>
+          </article>
+      </section>
+      <!-- menu navbar -->
+      <section class="header__section--navbarmenu">
+          <ul class="header__section--navul">
+              <li class="header__section--navul--li"><a href="#">Home</a></li>
+              <li class="header__section--navul--li"><a href="#">Servicios</a></li>
+              <li class="header__section--navul--li"><a href="#">Nosotros</a></li>
+              <li class="header__section--navul--li"><a href="#">Contacto</a></li>
+          </ul>
+      </section>
   </header>
   <section id="banner">
     <div class="contenido-banner">
