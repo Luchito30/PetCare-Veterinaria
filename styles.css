@@ -132,89 +132,7 @@ li {
     filter: drop-shadow(2px 2px 2px white);
 }
 
-@media (min-width:768px) {
-    .header {
-        justify-content: space-evenly;
-        padding: 0 70px;
-    }
-
-    .header__conteinerimg img {
-        width: 200px;
-    }
-}
-
-@media (min-width: 1000px) {
-    .header {
-        padding: 0 0px;
-        justify-content: space-around;
-    }
-
-    .header__section--hamburgersa {
-        display: none;
-    }
-
-    .header__conteinerimg img {
-        width: 250px;
-    }
-
-    .header__section--navbarmenu {
-        display: inline-block;
-        padding-right: 60px;
-    }
-
-    .header__section--navul {
-        display: flex;
-        gap: 50px;
-    }
-
-    .header__section--navul--li:hover {
-        transform: scale(1.3);
-    }
-
-    .header__section--navul--li:hover a {
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .header__section--navul--li:hover a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 32px;
-        width: 50%;
-        border-bottom: 3px solid chocolate;
-    }
-
-    .header__section--navul--li a {
-        color: white;
-        filter: drop-shadow(1px 2px 3px black);
-        font-size: 24px;
-        text-decoration-line: underline overline;
-        text-transform: uppercase;
-        text-underline-position: from-font;
-    }
-}
-
-@media (min-width: 1280px) {
-    .header__conteinerimg img {
-        width: 280px;
-    }
-
-    .header__section--navbarmenu {
-        display: inline-block;
-        padding-right: 100px;
-    }
-
-    .header__section--navul {
-        gap: 90px;
-    }
-
-    .header__section--navul--li a {
-        font-size: 28px;
-    }
-}
-
+/* Body */
 /*Banner*/
 #banner{
     padding: 0 50px;
@@ -515,6 +433,95 @@ li {
     width: 40px;
 }
 
+
+
+/* Medias Quuery */
+
+/*header */
+@media (min-width:768px) {
+    .header {
+        justify-content: space-evenly;
+        padding: 0 70px;
+    }
+
+    .header__conteinerimg img {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .header {
+        padding: 0 0px;
+        justify-content: space-around;
+    }
+
+    .header__section--hamburgersa {
+        display: none;
+    }
+
+    .header__conteinerimg img {
+        width: 250px;
+    }
+
+    .header__section--navbarmenu {
+        display: inline-block;
+        padding-right: 60px;
+    }
+
+    .header__section--navul {
+        display: flex;
+        gap: 50px;
+    }
+
+    .header__section--navul--li:hover {
+        transform: scale(1.3);
+    }
+
+    .header__section--navul--li:hover a {
+        color: black;
+        text-decoration: none;
+
+    }
+
+    .header__section--navul--li:hover a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 32px;
+        width: 50%;
+        border-bottom: 3px solid chocolate;
+    }
+
+    .header__section--navul--li a {
+        color: white;
+        filter: drop-shadow(1px 2px 3px black);
+        font-size: 24px;
+        text-decoration-line: underline overline;
+        text-transform: uppercase;
+        text-underline-position: from-font;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header__conteinerimg img {
+        width: 280px;
+    }
+
+    .header__section--navbarmenu {
+        display: inline-block;
+        padding-right: 100px;
+    }
+
+    .header__section--navul {
+        gap: 90px;
+    }
+
+    .header__section--navul--li a {
+        font-size: 28px;
+    }
+}
+
+/* footer */
 @media (min-width:768px) {
     .footer__section--conteinerimg{
         width: unset;
@@ -661,62 +668,9 @@ li {
 }
 
 
-
-
-
-
 /* responsive*  @media screen and (min-width: 0px) and (max-width: 600px)*/
 @media (min-width:6000px) and(max-width:768px){
-    /* header*/
-    .mostrar-menu,
-    .esconder-menu{
-        display: block;
-    }
-
-    .mostrar-menu {
-        /* Mostrar "hamburguesa" más grande y con diferente cursor */
-        font-size: 2em;
-        cursor: pointer;
-    }
-    .menu{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: var(--theme-color);
-        left: 0;       
-        top: 0;
-        text-align: center;
-        padding: 100px 0px;
-        z-index: 100;
-        transition: 0.8s;    
-        /* Evitar barra de desplazamiento en documento */
-        display: none;
-        position: absolute;
-        right: -100%;
-    }
-    #check {
-        /* El checkbox debe estar oculto */
-        display: none;
-    }
-    #check:checked ~ .menu {
-        display: block;
-        right: 0;
-    }
-
-    .menu a{
-        display: block;
-        padding: 20px;
-    }
-    .esconder-menu{
-        position: absolute;
-        top: 40px;
-        right: 40px;
-    }
-
-
-
-
-    /*servicios */
+   /*servicios */
     #servicios{
         flex-direction: column;
     }
@@ -732,54 +686,7 @@ li {
 
 
 @media only screen and (min-width: 320px) and (max-width: 576px) {
-
-
- /* header*/
-    .mostrar-menu,
-    .esconder-menu{
-        display: block;
-    }
-
-    .mostrar-menu {
-        /* Mostrar "hamburguesa" más grande y con diferente cursor */
-        font-size: 2em;
-        cursor: pointer;
-    }
-    .menu{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: var(--theme-color);
-        left: 0;       
-        top: 0;
-        text-align: center;
-        padding: 100px 0px;
-        z-index: 100;
-        transition: 0.8s;    
-        /* Evitar barra de desplazamiento en documento */
-        display: none;
-        position: absolute;
-        right: -100%;
-    }
-    #check {
-        /* El checkbox debe estar oculto */
-        display: none;
-    }
-    #check:checked ~ .menu {
-        display: block;
-        right: 0;
-    }
-
-    .menu a{
-        display: block;
-        padding: 20px;
-    }
-    .esconder-menu{
-        position: absolute;
-        top: 40px;
-        right: 40px;
-    }
-
+/*Banner */
     .contenido-banner h3{
         font-size:20px;
         font-weight: 200;
@@ -802,9 +709,8 @@ li {
     /*servicios */
     #servicios{
         flex-direction: column;
-    }
-	
-   /* https://es.stackoverflow.com/questions/423202/problemas-al-centrar-imagen-en-dise%C3%B1o-css-en-movil-responsive */
+    }	
+   
    #servicios img{
      width: 100%;  
 }
