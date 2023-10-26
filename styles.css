@@ -212,7 +212,7 @@ li {
 .img:hover {filter: opacity(.5);
     box-shadow: 0px 0px 15px 15px var(--primary-color);}
 
-    
+
 /* informacion */
 #info{
     padding: 0px 50px;
@@ -679,6 +679,9 @@ li {
         flex-direction: column;
     }
 	
+    .img:hover {filter: opacity(.5);
+        box-shadow: 0px 0px 10px 10px var(--primary-color);}
+
 	/* informacion*/
 	.contenido-i{
 		flex-direction:column;
@@ -714,6 +717,9 @@ li {
     #servicios{
         flex-direction: column;
     }	
+
+    .img:hover {filter: opacity(.5);
+        box-shadow: 0px 0px 10px 10px var(--primary-color);}
    
    #servicios img{
      width: 100%;  
