@@ -1,59 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto-PetCare</title>
-
+    <!-- Icono -->
+    <link rel="icon" sizes="any" href="/public/images/icon-petcare.png" type="image/png">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/2d353964a9.js" crossorigin="anonymous"></script>
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="/javascripts/libraries/sweetalert.js"></script>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="ccs\ESTILOSNUEVO.CSS">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
-   
-    <link rel="stylesheet" href="ccs\navbar.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://kit.fontawesome.com/a1a4bfb7b7.js" crossorigin="anonymous"></script>
-
-    <script defer src="app.js"></script>
-
-
-
+    <title>Contacto</title>
 </head>
 
-<header class="topheader">
-    <nav class="topnav">
-        <a href="#" class="logo">
-            <img height="150" width="250" src="imgs\logo.png" alt="logoPetCare">
-        </a>
-
-        <button class="open-menu" aria-label="Abrir menu">
-            <img src="hamburguer.svg" alt="Abrir menu">
-
-        </button>
-
-        <ul class="menu">
-
-            <button class="close-menu" aria-label="Cerrar menu">
-                <img src="close.svg" alt="Cerrar menu">
-            </button>
-
-            <li><a href="index.html" target="_blank">INICIO</a></li>
-            <li><a href="servicios.html" target="_blank">SERVICIOS</a></li>
-            <li><a href="nosotros.html" target="_blank">NOSOTROS</a></li>
-            <li><a href="equipo.html" target="_blank">EQUIPO</a></li>
-            <li><a href="#Contacto-PetCare" target="_self">CONTACTO</a></li>
-        </ul>
-    </nav>
-</header>
-
 <body>
+    <header class="header">
+        <!-- logo -->
+        <div class="header__conteinerimg">
+            <a href="index.html"><img src="imgs\logo.png" alt="Logo VetCare"></a>
+        </div>
+        <!-- menu Hamburgesa -->
+        <section class="header__section--hamburgersa">
+            <article class="header__section__article">
+                <div class="header__section__article__div">
+                    <i class="fa-solid fa-bars"></i>
+                    <nav class="header__section__article__div__nav">
+                        <div class="header__section__article__div__nav__div">
+                            <ul>
+                                <li class="header__nav--navegacion--primaria">
+                                    <a href="index.html"><i class="fa-solid fa-house"></i>
+                                    </a>
+                                </li>
+                                <li class="header__nav--navegacion--primaria"><a href="#">Servicios</a></li>
+                                <li class="header__nav--navegacion--primaria"><a href="#">Nosotros</a></li>
+                                <li class="header__nav--navegacion--primaria"><a href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </article>
+        </section>
+        <!-- menu navbar -->
+        <section class="header__section--navbarmenu">
+            <ul class="header__section--navul">
+                <li class="header__section--navul--li"><a href="#">Home</a></li>
+                <li class="header__section--navul--li"><a href="#">Servicios</a></li>
+                <li class="header__section--navul--li"><a href="#">Nosotros</a></li>
+                <li class="header__section--navul--li"><a href="#">Contacto</a></li>
+            </ul>
+        </section>
+    </header>
+
+
 
 
     <h2 class="subtitulo-contacto">Donde nos encontramos</h2>
@@ -73,19 +79,25 @@
     <div class="container">
         <div class="column" id="contact-form">
             <h2>Dejanos tu mensaje</h2>
-            <form id="contactForm">
-                <input required type="text" placeholder="Nombre*" id="nombre">
-                <input required type="text" placeholder="Apellido*" id="apellido">
-                <input required type="email" placeholder="Email*" id="email">
-                <input required type="tel" placeholder="Nro de telefono*" id="telefono">
-                <textarea required placeholder="Mensaje*" id="mensaje"></textarea>
+            <form  id="contactForm" >
+
+                <input required type="text" placeholder="Nombre*" id="nombre" name="nombre" >
+                <div id="nombre-error" class="error-message"></div>
+                <input required type="text" placeholder="Apellido*" id="apellido" name="apellido">
+                <div id="apellido-error" class="error-message"></div>
+                <input required type="email" placeholder="Email*" id="email" name="email">
+                <div id="email-error" class="error-message"></div>
+                <input required type="number" placeholder="Nro de telefono*" id="telefono" name="telefono">
+                <div id="telefono-error" class="error-message"></div>
+                <textarea required placeholder="Mensaje*" id="mensaje" name="mensaje"></textarea>
+                <div id="mensaje-error" class="error-message"></div>
                 <button type="submit">Enviar</button>
 
             </form>
-
-
-
         </div>
+        <div id="error-message"></div>
+
+
 
         <div class="popup" id="popup">
             <div class="popup-content">
@@ -94,42 +106,104 @@
             </div>
         </div>
 
-        <script src="validationform.js"></script>
+
 
         <div class="column" id="contact-info">
             <h2>Medios de contacto</h2>
-            <p> <i class="fa-solid fa-phone"></i> Telefono: 11-5555-5555 </p>
+            <p> <i class="fa-solid fa-phone"></i> Telefono: 0800 420 0809 </p>
             <p> <i class="fa-brands fa-whatsapp"></i> <a class="wapetcare" href=" https://w.app/YXDrPN" target="_blank">
                     WhatsApp:
-                    11-5555-5555 </p> </a>
-            <p> <i class="fa-regular fa-envelope"></i> <a class="mailpetcare" href="mailto:petcare@petcare.com"> Email:
-                    petcare@petcare.com </p></a>
+                    11 0420 0809 </p> </a>
+            <p> <i class="fa-regular fa-envelope"></i> <a class="mailpetcare"
+                    href="mailto:consultas.petcare@gmail.com?Subject=Consulta%20de%20Servicio&body=Necesito%20información%20del%20servicio:">
+                    Email:
+                    consultas.petcare@gmail.com </p></a>
             <p> <i class="fa-solid fa-house"></i> Av. de los lagos 7008. B1670. Rincon de Milberg. Bs.As.</p>
-            <p> <i class="fa-brands fa-instagram"></i><a class="igpetcare" href="https://www.instagram.com/" target="_blank"> Instagram: @petcare </p></a>
+            <p> <i class="fa-brands fa-instagram"></i><a class="igpetcare" href="https://www.instagram.com/"
+                    target="_blank"> Instagram: @petcare </p></a>
         </div>
     </div>
 
+
+
+    <footer class="footer">
+        <!-- logo y redes sociales -->
+        <section class="footer__section">
+            <div class="footer__section--conteinerimg">
+                <img src="imgs\logo.png" alt="">
+            </div>
+            <div class="footer__section--conteinersocial">
+                <ul>
+                    <li class="footer__section--conteinersocial-lista"><a href=""><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li class="footer__section--conteinersocial-lista"><a href=""><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                    <li class="footer__section--conteinersocial-lista"><a href=""><i
+                                class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- datos de contacto -->
+        <div class="footer__section2--container">
+            <section class="footer__section2">
+                <h3 class="footer__section2--titulo">Atencion al cliente</h3>
+                <div class="footer__section2--contacto">
+                    <ul class="footer__section2--contacto-ul">
+                        <li>0800 420 0809</li>
+                        <li>LU-VI de 09:00 a 21:00</li>
+                        <li>SA de 9:00 a 13:00 y 17:00 a 21:00</li>
+                        <li><a
+                                href="mailto:Petcarevet@gmail.com?Subject=Consulta%20de%20Servicio&body=Necesito%20información%20del%20servicio:">Petcarevet@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <hr class="footer__section--hr">
+            <section class="footer__section3">
+                <h3 class="footer__section3--titulo">Menu</h3>
+                <div class="footer__section3--contacto">
+                    <ul class="footer__section3--contacto-ul">
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">SERVICIOS</a></li>
+                        <li><a href="">NOSOTROS</a></li>
+                        <li><a href="">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <hr class="footer__section--hr2">
+            <section class="footer__section4">
+                <h3 class="footer__section4--titulo">Newsletter</h3>
+                <form id="form__enviar" class="footer__sections4--form">
+                    <input type="email" name="email" id="email" placeholder="Ingrese su email"
+                        class="footer__form--input">
+                    <button type="submit" class="footer__form--botton"><span
+                            class="footer__form--botton-span">Suscribite</span></button>
+                </form>
+            </section>
+        </div>
+
+
+        <hr class="footer__section--hr3">
+        <section class="footer__section--copyrigth">
+            <p>Copyright © 2023 PetCare</p>
+        </section>
+        <section class="footer__section--what">
+            <a href="#"><img src="imgs\whatsapp.png" alt="whatsapp" class="footer__section--what-img"></a>
+        </section>
+
+
+    </footer>
+    <script src="validationform.js"></script>
+    <!-- SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="newslettervalidator.js"></script>
+
 </body>
-<footer class="footer">
-    <nav class="bottom-nav">
-        <a href="#" class="logofooter">
-            <img src="imgs\logo.png" alt="logo" height="150" width="250"></a>
-
-
-        <ul class="menufooter">
-
-            <li><a href="#inicio" target="_blank">INICIO</a></li>
-            <li><a href="#servicios" target="_blank">SERVICIOS</a></li>
-            <li><a href="#nosotros" target="_blank">NOSOTROS</a></li>
-            <li><a href="#equipo" target="_blank">EQUIPO</a></li>
-            <li><a href="#Contacto-PetCare" target="_self">CONTACTO</a></li>
-        </ul>
-    </nav>
-    <div class="copypetcare">
-        <p><i class="fa-regular fa-copyright"></i> 2023 Pet Care</p>
-    </div>
-
-
-</footer>
 
 </html>
