@@ -209,6 +209,10 @@ li {
     margin: 15px 0px;
 }
 
+.img:hover {filter: opacity(.5);
+    box-shadow: 0px 0px 15px 15px var(--primary-color);}
+
+    
 /* informacion */
 #info{
     padding: 0px 50px;
