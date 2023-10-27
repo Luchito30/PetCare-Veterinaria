@@ -13,7 +13,7 @@ Responde a un diseño en el que el usuario pueda conocer sobre los servicios que
 <p style="text-align: justify;">Elegido el tema del proyecto, se  decide el nombre, el logotipo y las secciones del sitio.
 En una primera etapa, se define para el sitio web una estructura de 4 páginas html para distrubuir el contenido: Home; Nosotros, Servicios y Contacto.</p>
 
-<p style="text-align: justify;">Todas las página tienen sus propias secciones definidas pero comparten un mismo Header y Footer.</p>
+<p style="text-align: justify;">Todas las página tienen sus propias secciones definidas pero comparten un mismo Header y Footer. También se unifica la paleta de colores a utilizar y la tipografía</p>
 
 <p style="text-align: justify;">Cada miembro del grupo se encargó de la realización de una de las páginas del proyecto para finalmente unificarlo y publicarlo.</p>
 
