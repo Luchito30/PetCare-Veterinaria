@@ -75,17 +75,27 @@ li {
 }
 
 /* Servicios */
-#servicios{
-    padding: 50px 50px;
+
+.contenedor-servicios1{
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.contenedor-servicios2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #servicios img{
-    border-radius: 100%;  
-   
+    border-radius: 100%;     
 }
+
 #servicios div{
     padding: 30px 30px;
 }
@@ -145,29 +155,35 @@ li {
 }
 
 /* Medias Quuery */
-
-/* responsive*  @media screen and (min-width: 0px) and (max-width: 600px)*/
-@media (min-width:6000px) and(max-width:768px){
-   /*servicios */
-    #servicios{
-        flex-direction: column;
+@media (max-width: 600px) {
+    /*servicios*/
+    .contenedor-servicios1{
+        margin: 0;    
+        justify-content: center;
+        text-align: center;
+        flex-direction:column;
+         
     }
-	
+    .contenedor-servicios2{
+        margin: 0;    
+        justify-content: center;
+        text-align: center;
+        flex-direction:column;
+         
+    }
+    
+    #servicios img{
+        border-radius: 100%;  
+        display:block;
+        margin:0   ;
+        width: 100%;
+    }
+    
     .img:hover {filter: opacity(.5);
-        box-shadow: 0px 0px 10px 10px var(--primary-color);}
-
-	/* informacion*/
-	.contenido-i{
-		flex-direction:column;
-	}
-	.contenido-i div{
-		border:none;
-	}
-}
-
-
-@media only screen and (min-width: 320px) and (max-width: 576px) {
-/*Banner */
+        box-shadow: 0px 0px 15px 15px var(--primary-color);}
+    
+    
+    /* banner*/  
     .contenido-banner h3{
         font-size:20px;
         font-weight: 200;
@@ -184,31 +200,14 @@ li {
         padding: 10px 20px;
         align-self: baseline;   
         transition: all 0.4s;
+    }    
+    
+    /* informacion*/
+    .contenido-i{
+        flex-direction:column;
     }
-
-
-    /*servicios */
-    #servicios{
-        flex-direction: column;
-    }	
-
-    .img:hover {filter: opacity(.5);
-        box-shadow: 0px 0px 10px 10px var(--primary-color);}
-   
-   #servicios img{
-     width: 100%;  
-}
-	/* informacion*/
-	.contenido-i{
-		flex-direction:column;
-	}
-	.contenido-i div{
-		border:none;
-	}
-}
-
-
+    .contenido-i div{
+        border:none;
+    }
     
-    
-    
-    
+    }
