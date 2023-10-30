@@ -29,6 +29,9 @@ También contiene un párrafo con una pequeña descripción de la historia de la
 La vista de los mismos para qué ve vallan adaptando a los diferentes dispositivos se va modificando a través de media queries
 
 ###### Servicios
+<p>La página de servicios ofrece una breve información al usuario de los servicios que la  veterinaria tiene tanto online como lo que dispone en el local. Permite solicitar turnos y realizar consultas a través de la página de contacto del sitio o por Whatsapp</p>
+<p> Es una página básica que tiene imágenes con animaciones simples en efectos hover CSS como tansparencias y bordes. </p>
+<p> Se utilizaron íconos de https://www.flaticon.es/, https://kit.fontawesome.com; tipografia de fonts.googleapis.com y fotos del sitio https://www.freepik.es/.</p>
 
 ###### Contacto
 
